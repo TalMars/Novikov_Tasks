@@ -1,0 +1,11 @@
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\Novikov_Task.exe.config
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\Novikov_Task.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\Novikov_Task.pdb
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\HtmlAgilityPack.dll
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\HtmlAgilityPack.pdb
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\HtmlAgilityPack.xml
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\obj\Debug\Novikov_Task.csprojResolveAssemblyReference.cache
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\obj\Debug\Novikov_Task.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\obj\Debug\Novikov_Task.pdb
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\CsQuery.dll
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\CsQuery.xml

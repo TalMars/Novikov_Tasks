@@ -1,0 +1,6 @@
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\bin\Debug\Novikov_Task_2.exe.config
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\bin\Debug\Novikov_Task_2.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\bin\Debug\Novikov_Task_2.pdb
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.csprojResolveAssemblyReference.cache
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.pdb
