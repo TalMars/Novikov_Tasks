@@ -4,3 +4,9 @@ c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Ta
 c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.csprojResolveAssemblyReference.cache
 c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.exe
 c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.pdb
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task_2\Novikov_Task_2\bin\Debug\Novikov_Task_2.exe.config
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.exe
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.pdb
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task_2\Novikov_Task_2\bin\Debug\Novikov_Task_2.exe
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task_2\Novikov_Task_2\bin\Debug\Novikov_Task_2.pdb
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task_2\Novikov_Task_2\obj\Debug\Novikov_Task_2.csprojResolveAssemblyReference.cache

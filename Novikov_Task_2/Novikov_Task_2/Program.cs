@@ -63,15 +63,9 @@ namespace Novikov_Task_2
                 //Console.WriteLine();
             }
 
-            foreach (PageRankModel f in pageRanksList)
-            {
-                Console.Write(f.PageRank + " ");
-            }
-
-            Console.WriteLine();
-            
             for (int l = 0; l < 30; l++)
             {
+                List<PageRankModel> tempPageRankList = pageRanksList.ToList();
                 for (int i = 0; i < sizeMatrix; i++)
                 {
                     float sum = 0;
@@ -79,9 +73,13 @@ namespace Novikov_Task_2
                     {
                         sum += matrixP[i][j] * pageRanksList[i].PageRank;
                     }
-                    pageRanksList[i].PageRank = sum;
-                    //Console.Write(pageRanksList[i].PageRank + " ");
+                    if (sum <= float.MaxValue)
+                        tempPageRankList[i].PageRank = sum;
+                    else
+                        tempPageRankList[i].PageRank = float.MaxValue;
+                    Console.Write(tempPageRankList[i].PageRank + " ");
                 }
+                pageRanksList = tempPageRankList.ToList();
                 Console.WriteLine();
                 List<PageRankModel> sorted = (from p in pageRanksList
                                   orderby p.PageRank descending

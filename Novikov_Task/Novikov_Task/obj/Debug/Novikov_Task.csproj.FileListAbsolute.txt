@@ -9,3 +9,6 @@ c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task
 c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\obj\Debug\Novikov_Task.pdb
 c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\CsQuery.dll
 c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task\Novikov_Task\bin\Debug\CsQuery.xml
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task\Novikov_Task\bin\Debug\Novikov_Task.exe.config
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task\Novikov_Task\obj\Debug\Novikov_Task.exe
+C:\Users\TalMars\Documents\Visual Studio 2015\Projects\Novikov_Tasks\Novikov_Task\Novikov_Task\obj\Debug\Novikov_Task.pdb
