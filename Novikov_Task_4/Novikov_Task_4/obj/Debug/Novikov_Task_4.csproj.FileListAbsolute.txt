@@ -1,0 +1,6 @@
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_4\Novikov_Task_4\bin\Debug\Novikov_Task_4.exe.config
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_4\Novikov_Task_4\bin\Debug\Novikov_Task_4.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_4\Novikov_Task_4\bin\Debug\Novikov_Task_4.pdb
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_4\Novikov_Task_4\obj\Debug\Novikov_Task_4.csprojResolveAssemblyReference.cache
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_4\Novikov_Task_4\obj\Debug\Novikov_Task_4.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Task_4\Novikov_Task_4\obj\Debug\Novikov_Task_4.pdb
