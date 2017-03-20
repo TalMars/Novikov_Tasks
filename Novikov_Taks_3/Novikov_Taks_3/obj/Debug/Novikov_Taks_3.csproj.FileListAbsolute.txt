@@ -1,0 +1,6 @@
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Taks_3\Novikov_Taks_3\bin\Debug\Novikov_Taks_3.exe.config
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Taks_3\Novikov_Taks_3\bin\Debug\Novikov_Taks_3.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Taks_3\Novikov_Taks_3\bin\Debug\Novikov_Taks_3.pdb
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Taks_3\Novikov_Taks_3\obj\Debug\Novikov_Taks_3.csprojResolveAssemblyReference.cache
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Taks_3\Novikov_Taks_3\obj\Debug\Novikov_Taks_3.exe
+c:\users\talmars\documents\visual studio 2015\Projects\Novikov_Taks_3\Novikov_Taks_3\obj\Debug\Novikov_Taks_3.pdb

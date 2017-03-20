@@ -56,7 +56,7 @@ namespace Novikov_Task_2
                         if (countOutLinks[j] > 0)
                             matrixP[i][j] = 1 / (float)countOutLinks[j];
                         else
-                            matrixP[i][j] = 1 / sizeMatrix;
+                            matrixP[i][j] = 1 / (float)sizeMatrix;
                     }
                     //Console.Write(matrixP[i][j] + " ");
                 }
@@ -71,7 +71,7 @@ namespace Novikov_Task_2
                     float sum = 0;
                     for (int j = 0; j < sizeMatrix; j++)
                     {
-                        sum += matrixP[i][j] * pageRanksList[i].PageRank;
+                        sum += matrixP[i][j] * pageRanksList[j].PageRank;
                     }
                     if (sum <= float.MaxValue)
                         tempPageRankList[i].PageRank = sum;
