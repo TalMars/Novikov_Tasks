@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace Novikov_Taks_3
 
         static void Main(string[] args)
         {
-            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix1.txt";
+            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix.txt";
             string[] lines = File.ReadAllLines(pathToFile);
             commonLinks = lines[0].Split(' ').ToList();
             int sizeMatrix = commonLinks.Count;
@@ -80,15 +81,17 @@ namespace Novikov_Taks_3
                 pointerP.Add(countElements != 0 ? countElements : 0);
             }
 
+            Stopwatch sw = new Stopwatch();
             for (int l = 0; l < 30; l++)
             {
+                sw.Start();
                 List<PageRankModel> tempPageRankList = pageRanksList.ToList();
                 for (int i = 0; i < sizeMatrix; i++)
                 {
                     float sum = 0;
                     int n1 = (int)pointerP[i];
                     int n2 = (int)pointerP[i + 1];
-                    for(int k = n1; k < n2; k++)
+                    for (int k = n1; k < n2; k++)
                     {
                         sum += (float)valuesP[k] * pageRanksList[(int)colsP[k]].PageRank;
                     }
@@ -96,9 +99,10 @@ namespace Novikov_Taks_3
                         tempPageRankList[i].PageRank = sum;
                     else
                         tempPageRankList[i].PageRank = float.MaxValue;
-                    Console.Write(tempPageRankList[i].PageRank + " ");
+                    //Console.Write(tempPageRankList[i].PageRank + " ");
                 }
                 pageRanksList = tempPageRankList.ToList();
+                sw.Stop();
                 Console.WriteLine();
                 //сортировка
                 List<PageRankModel> sorted = (from p in pageRanksList
@@ -111,7 +115,7 @@ namespace Novikov_Taks_3
                 }
                 Console.WriteLine("---------------------------------------------------------");
             }
-
+            Console.WriteLine("Total Milliseconds: " + sw.ElapsedMilliseconds);
             Console.ReadKey();
         }
 

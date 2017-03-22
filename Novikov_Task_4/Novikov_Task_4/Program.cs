@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,10 +27,11 @@ namespace Novikov_Task_4
 
         static List<PageRankModel> pageRanksList = new List<PageRankModel>();
         static List<PageRankModel> tempPageRankList = new List<PageRankModel>();
+        static float sum;
 
         static void Main(string[] args)
         {
-            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix1.txt";
+            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix.txt";
             string[] lines = File.ReadAllLines(pathToFile);
             commonLinks = lines[0].Split(' ').ToList();
             int sizeMatrix = commonLinks.Count;
@@ -52,7 +54,7 @@ namespace Novikov_Task_4
                         countOutLinks++;
                     }
                 }
-                pointer.Add(countOutLinks != 0 ? countOutLinks : 0);
+                pointer.Add(countOutLinks); //countOutLinks != 0 ? countOutLinks : 0
             }
 
             int countElements = 0;
@@ -78,14 +80,21 @@ namespace Novikov_Task_4
                         countElements++;
                     }
                 }
-                pointerP.Add(countElements != 0 ? countElements : 0);
+                pointerP.Add(countElements); //countElements != 0 ? countElements : 0
             }
 
+            Stopwatch sw = new Stopwatch();
             for (int l = 0; l < 30; l++)
             {
+                sw.Start();
                 tempPageRankList = pageRanksList.ToList();
-                Parallel.For(0, sizeMatrix, PageRankCalculate);
+                Parallel.For(0, sizeMatrix, PageRankCalculate); //1
+                //for (int i = 0; i < sizeMatrix; i++)
+                //{
+                //    PageRankCalculate(i);
+                //}
                 pageRanksList = tempPageRankList.ToList();
+                sw.Stop();
                 Console.Write(l + " Iteration");
                 Console.WriteLine();
                 //сортировка
@@ -99,24 +108,30 @@ namespace Novikov_Task_4
                 }
                 Console.WriteLine("---------------------------------------------------------");
             }
-
-            Console.ReadKey(); //Task 3(only PageRank calculate) = 3 827 msc //Task 4: 3 226 msc !!!With out stream in console
+            Console.WriteLine("Total Milliseconds: " + sw.ElapsedMilliseconds);
+            Console.ReadKey(); //Task 3(only PageRank calculate) = 2 msc //Task 4: (1) = ~200 msc, (2) = ~1000msc, (1,2) = ~ 800msc
         }
 
         static void PageRankCalculate(int i)
         {
-            float sum = 0;
+            sum = 0;
             int n1 = (int)pointerP[i];
             int n2 = (int)pointerP[i + 1];
             for (int k = n1; k < n2; k++)
             {
                 sum += (float)valuesP[k] * pageRanksList[(int)colsP[k]].PageRank;
             }
+            //Parallel.For(n1, n2, MultByVector); //2
             if (sum <= float.MaxValue)
                 tempPageRankList[i].PageRank = sum;
             else
                 tempPageRankList[i].PageRank = float.MaxValue;
-            Console.Write(tempPageRankList[i].PageRank + " ");
+            //Console.Write(tempPageRankList[i].PageRank + " ");
+        }
+
+        static void MultByVector(int k)
+        {
+            sum += (float)valuesP[k] * pageRanksList[(int)colsP[k]].PageRank;
         }
 
         static int GetValueFromMatrix(int i, int j)
