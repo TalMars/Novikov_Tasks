@@ -14,9 +14,9 @@ namespace Novikov_Task
 {
     class Program
     {
-        const string mainHtml = "https://medium.com/";//"https://msdn.microsoft.com/en-us/library/8tfzyc64(v=vs.110).aspx";//"https://blogs.msdn.microsoft.com/quick_thoughts/2015/06/01/windows-10-splitview-build-your-first-hamburger-menu/";//"https://medium.com/";
+        const string mainHtml = "http://kpfu.ru/";//"https://msdn.microsoft.com/en-us/library/8tfzyc64(v=vs.110).aspx";//"https://blogs.msdn.microsoft.com/quick_thoughts/2015/06/01/windows-10-splitview-build-your-first-hamburger-menu/";//"https://medium.com/";
         static string mainWithoutHttp = "";
-        const int sizeMatrix = 100;
+        const int sizeMatrix = 300;
 
         static List<string> commonLinks = new List<string>();
         static Dictionary<string, int> dictionary = new Dictionary<string, int>();
@@ -41,7 +41,7 @@ namespace Novikov_Task
                 //HAPIndexingWithDictionary(commonLinks[i], i);
             }
 
-            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix2.txt";
+            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix3.txt";
 
             using (StreamWriter file = new StreamWriter(pathToFile, true))
             {
@@ -79,8 +79,9 @@ namespace Novikov_Task
                     string html = client.DownloadString(link);
 
                     CQ doc = CQ.Create(html);
-
-                    List<IDomObject> nodes = doc.Find("a").ToList();
+                    List<IDomObject> nodes = null;
+                    if (doc.Document.Body != null)
+                        nodes = doc.Find("a").ToList();
                     if (nodes != null)
                     {
                         foreach (IDomObject a in nodes)

@@ -29,7 +29,7 @@ namespace Novikov_Taks_3
 
         static void Main(string[] args)
         {
-            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix.txt";
+            string pathToFile = @"C:\Users\TalMars\Desktop\Novikov_Task\matrix1.txt";
             string[] lines = File.ReadAllLines(pathToFile);
             commonLinks = lines[0].Split(' ').ToList();
             int sizeMatrix = commonLinks.Count;
@@ -111,7 +111,7 @@ namespace Novikov_Taks_3
 
                 for (int i = 0; i < sizeMatrix; i++)
                 {
-                    Console.WriteLine(commonLinks[sorted[i].IndexPage]);
+                    Console.WriteLine(commonLinks[sorted[i].IndexPage] + "    PageRank: " + sorted[i].PageRank);
                 }
                 Console.WriteLine("---------------------------------------------------------");
             }

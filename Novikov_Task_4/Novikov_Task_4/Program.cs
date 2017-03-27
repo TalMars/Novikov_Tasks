@@ -89,6 +89,7 @@ namespace Novikov_Task_4
                 sw.Start();
                 tempPageRankList = pageRanksList.ToList();
                 Parallel.For(0, sizeMatrix, PageRankCalculate); //1
+
                 //for (int i = 0; i < sizeMatrix; i++)
                 //{
                 //    PageRankCalculate(i);
@@ -104,12 +105,18 @@ namespace Novikov_Task_4
 
                 for (int i = 0; i < sizeMatrix; i++)
                 {
-                    Console.WriteLine(commonLinks[sorted[i].IndexPage]);
+                    Console.WriteLine(commonLinks[sorted[i].IndexPage] + "    PageRank: " + sorted[i].PageRank);
                 }
                 Console.WriteLine("---------------------------------------------------------");
             }
             Console.WriteLine("Total Milliseconds: " + sw.ElapsedMilliseconds);
-            Console.ReadKey(); //Task 3(only PageRank calculate) = 2 msc //Task 4: (1) = ~200 msc, (2) = ~1000msc, (1,2) = ~ 800msc
+            Console.ReadKey();
+
+            // medium.com 100x100   Task 3(only PageRank calculate) = 2 msc //Task 4: (1) = ~250 msc, (2) = ~1000msc, (1,2) = ~ 800msc
+            // medium.com 300x300   Task 3(only PageRank calculate) = 6 msc //Task 4: (1) = ~66 msc, (2) = ~1600msc, (1,2) = ~ 1000msc
+
+            //kpfu.ru 100x100 Task 3(only PageRank calculate) = 12 msc //Task 4: (1) = ~79 msc
+            //kpfu.ru 300x300 Task 3(only PageRank calculate) = 44 msc //Task 4: (1) = ~110 msc
         }
 
         static void PageRankCalculate(int i)
@@ -117,6 +124,9 @@ namespace Novikov_Task_4
             sum = 0;
             int n1 = (int)pointerP[i];
             int n2 = (int)pointerP[i + 1];
+            //IEnumerable<int> nums = Enumerable.Range(n1, n2 - n1);
+            //sum = (from n in nums.AsParallel()
+            //       select (float)valuesP[n] * pageRanksList[(int)colsP[n]].PageRank).Sum();
             for (int k = n1; k < n2; k++)
             {
                 sum += (float)valuesP[k] * pageRanksList[(int)colsP[k]].PageRank;
